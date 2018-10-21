@@ -225,4 +225,15 @@ u.guild.members.get(ss.executor.id).roles.forEach(r => {
         if (err) console.log(err.message);
     });
 });
+client.on('guildMemberAdd',member => {
+try {
+    if(member.user.bot) {
+      member.ban({
+        reason: `AntiBots`
+      });
+    }
+}catch(e){
+   console.log(e)
+}
+});
             client.login(process.env.BOT_TOKEN);
