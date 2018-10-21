@@ -1,8 +1,7 @@
-
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const RichEmbed = require("discord.js");
-const { Client, Util } = require('discord.js');
+const Discord = require("discord.js");
+const {Client , RichEmbed} = require('discord.js');
+  const fs = require('fs');
+const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
 
 const devs = ["456641975932813345"]
 
@@ -164,8 +163,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
  channelr[channelremover.id].deleted = 0;
   },Otime)
   });
-  const fs = require('fs');
-const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+
  
 client.on('guildMemberRemove', (u) => {
     u.guild.fetchAuditLogs().then( s => {
