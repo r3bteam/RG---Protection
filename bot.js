@@ -3,6 +3,7 @@ const RichEmbed = require("discord.js");
 const client = new Discord.Client();
 const { Client, Util } = require('discord.js');
 const fs = require('fs');
+const moment = require("moment")
 const data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
 
 const devs = ["456641975932813345"]
