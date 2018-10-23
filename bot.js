@@ -55,7 +55,7 @@ client.on('message', message => {
   });
 
 client.on("guildMemberAdd", m => {
-        let room = m.guild.channels.find(a => a.name === 'chat'); //
+        let room = m.guild.channels.find(a => a.name === 'fakes'); //
     if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 8) {
         m.ban() .then((
             room.send(`**:no_entry: | ${m} Has been banned for: \`fake\`**`)
